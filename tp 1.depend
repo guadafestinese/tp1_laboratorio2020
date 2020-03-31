@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1585631040 source:c:\users\usuario\desktop\programacion2020\tp1\tp 1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"calculadora.h"
+
+1585630770 c:\users\usuario\desktop\programacion2020\tp1\tp 1\calculadora.h
+
+1585622717 c:\users\usuario\desktop\programacion2020\tp1\tp 1\calculadora.c
+	"calculadora.h"
+
+1585630099 source:c:\users\usuario\desktop\programacion2020\tp1\tp 1\calculadora.c
+	<stdio.h>
+
