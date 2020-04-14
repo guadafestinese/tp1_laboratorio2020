@@ -38,8 +38,8 @@ float division (int x, int y);
 
 /**
 *\brief calcula el factorial de un numero
-*\param int valor
+*\param int num
 *\return regresa el resultado de tipo entero
 *
 */
-int factorial (int valor);
+int factorial (int num);

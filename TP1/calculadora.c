@@ -40,15 +40,13 @@ float division (int x, int y)
     return (float) x/y;
 }
 
-int factorial (int valor)
+int factorial (int num)
 {
-    int i;
-    int resultado=1;
-    i= valor;
-
-   for(i=1; i<=valor; i++){
-    resultado*=i;
+    int fact = 1;
+   for (int i=1; i<=num; i++){
+    fact = fact * i;
    }
-    return resultado;
+
+    return fact;
 
 }

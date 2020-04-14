@@ -52,6 +52,7 @@ int main()
         printf("c) Calcular la division (%d/%d)\n",num1,num2);
         printf("d) Calcular la multiplicacion (%d*%d)\n",num1,num2);
         printf("e) Calcular el factorial primer num (%d!), factorial segundo num (%d!)\n\n",num1,num2);
+        printf("OPERACIONES CALCULADAS \n\n");
     }
 //---------------FIN FLAG3-----------------------
     if (flag4==0){
@@ -94,13 +95,16 @@ int main()
            if (flag1==0&&flag2==0)
            {
                printf("Faltan los dos numeros\n");
+               system("pause");
 
            }else if(flag1==1&&flag2==0)
             {
             printf("Falta el segundo numero\n");
+            system("pause");
             }else if(flag1==0&&flag2==1)
             {
                 printf("Falta el primer numero\n");
+                system("pause");
             }else{
                 auxSuma= suma(num1,num2);
                 auxResta= resta(num1,num2);
@@ -111,6 +115,7 @@ int main()
 
                     }else{
                         printf("No se puede dividir por cero\n");
+                        system("pause");
                     }
 
                 auxFact1= factorial(num1);
@@ -119,6 +124,7 @@ int main()
 
             }
             printf("Calculos terminados\n");
+            system("pause");
             flag3=1;
             break;
 

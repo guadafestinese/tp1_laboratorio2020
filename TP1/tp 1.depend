@@ -1,0 +1,34 @@
+# depslib dependency file v1.0
+1585631040 source:c:\users\usuario\desktop\programacion2020\tp1\tp 1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"calculadora.h"
+
+1585630770 c:\users\usuario\desktop\programacion2020\tp1\tp 1\calculadora.h
+
+1585622717 c:\users\usuario\desktop\programacion2020\tp1\tp 1\calculadora.c
+	"calculadora.h"
+
+1585630099 source:c:\users\usuario\desktop\programacion2020\tp1\tp 1\calculadora.c
+	<stdio.h>
+
+1585630099 source:c:\users\usuario\desktop\programacion2020\tp1\tp 1\tp1_laboratorio2020\calculadora.c
+	<stdio.h>
+
+1586107609 source:c:\users\usuario\desktop\programacion2020\tp1\tp 1\tp1_laboratorio2020\main.c
+	<stdio.h>
+	<stdlib.h>
+	"calculadora.h"
+
+1585630770 c:\users\usuario\desktop\programacion2020\tp1\tp 1\tp1_laboratorio2020\calculadora.h
+
+1586824472 source:c:\users\usuario\desktop\programacion2020\tp1\tp 1\tp1_laboratorio2020\tp1\calculadora.c
+	<stdio.h>
+
+1586824472 source:c:\users\usuario\desktop\programacion2020\tp1\tp 1\tp1_laboratorio2020\tp1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"calculadora.h"
+
+1586824605 c:\users\usuario\desktop\programacion2020\tp1\tp 1\tp1_laboratorio2020\tp1\calculadora.h
+
