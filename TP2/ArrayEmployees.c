@@ -3,7 +3,6 @@
 #include <string.h>
 #include "ArrayEmployees.h"
 #include "validaciones.h"
-#include "utn.h"
 #include <conio.h>
 
 void initEmployees(eEmployee empleado[], int len)
@@ -98,19 +97,20 @@ void findEmployeeById (eEmployee empleado [], int cantidad){
 //--------------------------
 
 void mostrarEmpleado(eEmployee empleado){
-    printf("ID: %d\nSector: %d\nApellido y nombre:\n%s%s\nSalario: %.2f\n", empleado.id, empleado.sector, empleado.lastName, empleado.name, empleado.salary);
+    printf("ID   Sector           Apellido            Nombre      Salario\n\n");
+    printf("%d   %d     %20s %20s    %8.2f\n",empleado.id, empleado.sector, empleado.lastName, empleado.name, empleado.salary);
 }
 
 //---------------------------------------------
 
 void mostrarTodos (eEmployee empleado [], int cantidad){
     int i;
+    printf("ID   Sector           Apellido            Nombre      Salario\n\n");
     for (i=0; i<cantidad; i++){
         if(empleado[i].isEmpty==0){
 
+        printf("%d   %d     %20s %20s    %8.2f\n", empleado[i].id, empleado[i].sector, empleado[i].lastName, empleado[i].name, empleado[i].salary);
 
-        printf("ID: %d\nSector: %d\nApellido y nombre: \n%s%s\nSalario: %.2f\n", empleado[i].id, empleado[i].sector, empleado[i].lastName, empleado[i].name, empleado[i].salary);
-        printf("-------------------------------------------------------------\n");
     }
     }
 
@@ -135,7 +135,7 @@ void modificarEmpleado (eEmployee empleado[], int cantidad){
             printf("\nDATOS ENCONTRADOS\n");
             mostrarEmpleado(empleado[i]);
             printf("\n---------------------------------------------\n\n");
-            auxModificar=funcionMenu("1.Nuevo nombre\n2.Nuevo Apellido\n3.Nuevo Salario\n4.Nuevo sector\n");
+            auxModificar=funcionMenu("1.Nuevo nombre\n2.Nuevo Apellido\n3.Nuevo Salario\n4.Nuevo sector\n5.Salir\n");
 
             switch(auxModificar){
 
@@ -176,6 +176,11 @@ void modificarEmpleado (eEmployee empleado[], int cantidad){
                     empleado[i].sector = nuevoSector;
                 }
             break;
+
+            case 5:
+                printf("No se modifico ningun dato\n");
+                getch();
+                break;
 
             }//FIN SWITCH
 
@@ -241,7 +246,7 @@ void sortEmployees (eEmployee empleado[], int cantidad){
 void promedioEmpleados (eEmployee empleado[], int cantidad){
 
     int i;
-    int acumulador=0;
+    float acumulador=0;
     int contSalarios=0;
     float promedio;
 
@@ -255,7 +260,7 @@ void promedioEmpleados (eEmployee empleado[], int cantidad){
     }
 
     promedio= (float) acumulador/contSalarios;
-    printf("La cantidad de salarios es %d y suma %d \n", contSalarios, acumulador);
+    printf("La cantidad de salarios es %d y suma %.2f \n", contSalarios, acumulador);
     printf("El promedio de salarios es %.2f\n", promedio);
 
 }

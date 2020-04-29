@@ -3,10 +3,9 @@
 #include <string.h>
 #include "ArrayEmployees.h"
 #include "validaciones.h"
-#include "utn.h"
 #include <conio.h>
 
-#define CANTIDAD 1000
+#define CANTIDAD 3
 
 /*
 1. ALTAS: Se debe permitir ingresar un empleado calculando automáticamente el número
