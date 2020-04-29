@@ -1,0 +1,43 @@
+# depslib dependency file v1.0
+1588131190 source:c:\users\usuario\desktop\programacion2020\tp2\tp2\arrayemployees.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayEmployees.h"
+	"validaciones.h"
+	"utn.h"
+	<conio.h>
+
+1588132397 c:\users\usuario\desktop\programacion2020\tp2\tp2\arrayemployees.h
+
+1588131136 source:c:\users\usuario\desktop\programacion2020\tp2\tp2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayEmployees.h"
+	"validaciones.h"
+	"utn.h"
+	<conio.h>
+
+1586142612 source:c:\users\usuario\desktop\programacion2020\tp2\tp2\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayEmployees.h"
+	"validaciones.h"
+	"utn.h"
+	<conio.h>
+
+1586116108 c:\users\usuario\desktop\programacion2020\tp2\tp2\utn.h
+
+1586123265 c:\users\usuario\desktop\programacion2020\tp2\tp2\validaciones.h
+
+1586142612 source:c:\users\usuario\desktop\programacion2020\tp2\tp2\validaciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayEmployees.h"
+	"validaciones.h"
+	"utn.h"
+	<conio.h>
+
