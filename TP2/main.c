@@ -29,7 +29,7 @@ int main()
 
 
     do{
-        opcion=funcionMenu("Menu opciones\n\n1.ALTA EMPLEADO\n2.MODIFICAR\n3.BAJA\n4.INFORMAR\n");
+        opcion=funcionMenu("Menu opciones\n\n1.ALTA EMPLEADO\n2.MODIFICAR\n3.BAJA\n4.INFORMAR\n5.SALIR\n");
         switch(opcion){
 
 
@@ -69,6 +69,7 @@ int main()
         case 5:
             printf("Ha salido\n");
             break;
+
         default:
             printf("Opcion invalida\n");
             break;
