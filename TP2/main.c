@@ -5,7 +5,7 @@
 #include "validaciones.h"
 #include <conio.h>
 
-#define CANTIDAD 3
+#define CANTIDAD 1000
 
 /*
 1. ALTAS: Se debe permitir ingresar un empleado calculando automáticamente el número
@@ -26,6 +26,8 @@ int main()
     initEmployees(empleado, CANTIDAD);
     int opcion;
     int opcion4;
+    int flagAlta =0;
+
 
 
     do{
@@ -37,44 +39,61 @@ int main()
         case 1:
             printf("1.ALTA EMPLEADO\n");
             addEmployee(empleado,CANTIDAD);
+            flagAlta = 1 ;
             break;
 
         case 2:
-            mostrarTodos(empleado,CANTIDAD);
-            modificarEmpleado(empleado,CANTIDAD);
+            if (flagAlta ==1) {
+                printEmployees(empleado,CANTIDAD);
+                modificarEmpleado(empleado,CANTIDAD);
+            }else{
+                printf("Debe cargar un empleado primero \n");
+                system("pause");
+            }
 
             break;
         case 3:
-            mostrarTodos(empleado,CANTIDAD);
-            removeEmployee(empleado, CANTIDAD);
+            if(flagAlta ==1){
+                printEmployees(empleado,CANTIDAD);
+                removeEmployee(empleado, CANTIDAD);
+            }else{
+                printf("Debe cargar un empleado primero \n");
+                system("pause");
+            }
             break;
 
         case 4:
-            opcion4=funcionMenu("1) Listado de empleados ordenados alfabeticamente por apellido y sector\n2) Total y promedio de los salarios, y cuantos empleados superan el salario promedio\n");
-            switch(opcion4){
-            case 1:
-                sortEmployees(empleado, CANTIDAD);
-                mostrarTodos(empleado, CANTIDAD);
+            if(flagAlta==1){
+                opcion4=funcionMenu("1) Listado de empleados ordenados alfabeticamente por apellido y sector\n2) Total y promedio de los salarios, y cuantos empleados superan el salario promedio\n");
+                switch(opcion4){
+                    case 1:
+                        sortEmployees(empleado, CANTIDAD);
+                        printEmployees(empleado, CANTIDAD);
+                        system("pause");
+                        break;
+
+                    case 2:
+                        promedioEmpleados(empleado,CANTIDAD);
+                        system("pause");
+                        break;
+
+                    }
+
+                    break;
+                case 5:
+                    printf("Ha salido\n");
+                    break;
+
+                default:
+                    printf("Opcion invalida\n");
+                    system("pause");
+                    break;
+
+            }else{
+                printf("Debe cargar un empleado primero \n");
                 system("pause");
-                break;
-
-            case 2:
-                promedioEmpleados(empleado,CANTIDAD);
-                system("pause");
-                break;
-
             }
-
-            break;
-        case 5:
-            printf("Ha salido\n");
-            break;
-
-        default:
-            printf("Opcion invalida\n");
-            break;
-
-            }
+        }
 
 
     system("cls");
@@ -83,6 +102,7 @@ int main()
     }while(opcion!=5);
     return 0;
 }
+
 
 
 

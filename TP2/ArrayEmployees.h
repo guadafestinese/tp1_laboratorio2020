@@ -61,7 +61,7 @@ void findEmployeeById(eEmployee empleado[], int cantidad);
  *
  */
 
-void mostrarTodos (eEmployee empleado [], int cantidad);
+void printEmployees (eEmployee empleado [], int cantidad);
 //--------------------------------------------------------------------------
 
 /** \brief Modifica un empleado

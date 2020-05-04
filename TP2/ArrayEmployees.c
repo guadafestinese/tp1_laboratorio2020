@@ -103,7 +103,7 @@ void mostrarEmpleado(eEmployee empleado){
 
 //---------------------------------------------
 
-void mostrarTodos (eEmployee empleado [], int cantidad){
+void printEmployees (eEmployee empleado [], int cantidad){
     int i;
     printf("ID   Sector           Apellido            Nombre      Salario\n\n");
     for (i=0; i<cantidad; i++){
@@ -185,6 +185,9 @@ void modificarEmpleado (eEmployee empleado[], int cantidad){
             }//FIN SWITCH
 
 
+        }else{
+            printf("Datos incorrectos, no se encontro el ID\n");
+            break;
         }
     }
 
@@ -204,6 +207,7 @@ void removeEmployee (eEmployee empleado [], int cantidad){
         if(empleado[i].id == auxBaja){
             empleado[i].isEmpty = 1;
             printf("Se dio de baja el empleado\n");
+            system("pause");
         }
     }
 }
