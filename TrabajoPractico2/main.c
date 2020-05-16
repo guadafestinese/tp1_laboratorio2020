@@ -22,17 +22,16 @@ o Salario o Sector
 
 int main()
 {
-    eEmployee empleado[CANTIDAD];
+    eEmployee empleado[CANTIDAD]; //= { {1, "Claudia", "Aris", 3000, 2, 0}, {2, "Franco", "Festinese", 4000, 3, 0}, {3, "Guadalupe", "Festinese", 3500, 3, 0}, {4, "Camila", "Davo", 4500, 1, 0}, {5, "Norberto", "Davo", 3000, 1, 0} };
     initEmployees(empleado, CANTIDAD);
-    int opcion;
-    int opcion4;
     int flagAlta =0;
+    char opcion=0;
 
 
 
     do{
-        opcion=funcionMenu("Menu opciones\n\n1.ALTA EMPLEADO\n2.MODIFICAR\n3.BAJA\n4.INFORMAR\n5.SALIR\n");
-        switch(opcion){
+
+        switch(menu()){
 
 
 
@@ -43,32 +42,30 @@ int main()
             break;
 
         case 2:
-            if (flagAlta ==1) {
-                printEmployees(empleado,CANTIDAD);
+            if(flagAlta == 1){
                 modificarEmpleado(empleado,CANTIDAD);
             }else{
-                printf("Debe cargar un empleado primero \n");
+                printf("Debe cargar un empleado primero\n");
                 system("pause");
             }
-
             break;
+
         case 3:
-            if(flagAlta ==1){
-                printEmployees(empleado,CANTIDAD);
+            system("cls");
+            if(flagAlta==1){
                 removeEmployee(empleado, CANTIDAD);
             }else{
-                printf("Debe cargar un empleado primero \n");
+                printf("Debe cargar un empleado primero\n");
                 system("pause");
             }
             break;
 
         case 4:
-            if(flagAlta==1){
-                opcion4=funcionMenu("1) Listado de empleados ordenados alfabeticamente por apellido y sector\n2) Total y promedio de los salarios, y cuantos empleados superan el salario promedio\n");
-                switch(opcion4){
+            if (flagAlta==1){
+                switch(menuInformes())
+                {
                     case 1:
                         sortEmployees(empleado, CANTIDAD);
-                        printEmployees(empleado, CANTIDAD);
                         system("pause");
                         break;
 
@@ -76,34 +73,30 @@ int main()
                         promedioEmpleados(empleado,CANTIDAD);
                         system("pause");
                         break;
+                }
 
-                    }
+            }else{
+                printf("Debe cargar un empleado primero\n");
+                system("pause");
+            }
+            break;
 
-                    break;
-                case 5:
-                    printf("Ha salido\n");
-                    break;
+
 
                 default:
                     printf("Opcion invalida\n");
                     system("pause");
                     break;
 
-            }else{
-                printf("Debe cargar un empleado primero \n");
-                system("pause");
-            }
-        }
+
 
 
     system("cls");
 
 
-    }while(opcion!=5);
-    return 0;
+    }
+
+
+}while(opcion != 10);
+ return 0;
 }
-
-
-
-
-

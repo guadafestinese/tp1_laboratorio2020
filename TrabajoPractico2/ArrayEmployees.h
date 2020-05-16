@@ -1,4 +1,5 @@
-
+#ifndef ARRAYEMPLOYEES_H_INCLUDED
+#define ARRAYEMPLOYEES_H_INCLUDED
 typedef struct{
  int id;
  char name[51];
@@ -7,6 +8,8 @@ typedef struct{
  int sector;
  int isEmpty;
 }eEmployee;
+#endif // ARRAYEMPLOYEES_H_INCLUDED
+
 
 /** \brief Se utiliza esta funcion para inicializar el empleado
  * Se pone en 1 si esta ocupada la posicion
@@ -16,6 +19,16 @@ typedef struct{
  */
 void initEmployees(eEmployee empleado[], int len);
 
+/** \brief Busca un empleado por el ID
+ *
+ * \param  int id
+ * \param eEmployee empleado[]
+ * \param int tam
+ * \return devuelve -1 si no lo encontro y el ID si lo encontro
+ *
+ */
+
+int findEmployeeById(int id, eEmployee empleado[], int tam);
 //--------------------------------------------------------------------------
 
 /** \brief Se utiliza para agregar un empleado
@@ -41,17 +54,6 @@ void addEmployee (eEmployee empleado[], int cantidad);
 void mostrarEmpleado(eEmployee empleado);
 //--------------------------------------------------------------------------
 
-
-/** \brief Busca un empleado
- *
- * \param eEmployee empleado[]
- * \param int cantidad
- * \return no devuelve nada
- *
- */
-
-void findEmployeeById(eEmployee empleado[], int cantidad);
-//--------------------------------------------------------------------------
 
 /** \brief Muestra todos los empleados cargados
  *
