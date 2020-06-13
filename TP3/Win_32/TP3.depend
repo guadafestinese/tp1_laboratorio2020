@@ -101,3 +101,52 @@
 
 1533133022 c:\users\usuario\desktop\tp3_cascara\win_32\parser.h
 
+1592080871 source:c:\users\usuario\desktop\programacion2020\tp1\tp 1\tp1_laboratorio2020\tp3\win_32\employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Employee.h"
+	"LinkedList.h"
+
+1592077795 c:\users\usuario\desktop\programacion2020\tp1\tp 1\tp1_laboratorio2020\tp3\win_32\employee.h
+	"LinkedList.h"
+
+1533133022 c:\users\usuario\desktop\programacion2020\tp1\tp 1\tp1_laboratorio2020\tp3\win_32\linkedlist.h
+
+1592078257 source:c:\users\usuario\desktop\programacion2020\tp1\tp 1\tp1_laboratorio2020\tp3\win_32\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+
+1592086015 c:\users\usuario\desktop\programacion2020\tp1\tp 1\tp1_laboratorio2020\tp3\win_32\controller.h
+
+1592062879 source:c:\users\usuario\desktop\programacion2020\tp1\tp 1\tp1_laboratorio2020\tp3\win_32\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1592080184 source:c:\users\usuario\desktop\programacion2020\tp1\tp 1\tp1_laboratorio2020\tp3\win_32\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"utn.h"
+
+1592080184 c:\users\usuario\desktop\programacion2020\tp1\tp 1\tp1_laboratorio2020\tp3\win_32\utn.h
+
+1592086306 source:c:\users\usuario\desktop\programacion2020\tp1\tp 1\tp1_laboratorio2020\tp3\win_32\controller.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"LinkedList.h"
+	"Employee.h"
+	"parser.h"
+	"Controller.h"
+	"utn.h"
+
+1533133022 c:\users\usuario\desktop\programacion2020\tp1\tp 1\tp1_laboratorio2020\tp3\win_32\parser.h
+

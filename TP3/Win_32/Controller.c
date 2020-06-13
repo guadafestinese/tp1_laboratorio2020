@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 #include "LinkedList.h"
 #include "Employee.h"
 #include "parser.h"
@@ -92,7 +93,7 @@ int controller_addEmployee(LinkedList* pArrayListEmployee)
 
     if(pArrayListEmployee != NULL)
     {
-        auxId = controller_proximoID(pArrayListEmployee);
+        auxId = proximoID(pArrayListEmployee);
         printf("Ingrese nombre: ");
         fflush(stdin);
         gets(auxNombre);
@@ -103,7 +104,8 @@ int controller_addEmployee(LinkedList* pArrayListEmployee)
             fflush(stdin);
             gets(auxNombre);
         }
-        strupr(auxNombre);
+        strlwr(auxNombre);
+        auxNombre[0] = toupper(auxNombre[0]);
 
 
 
@@ -487,18 +489,17 @@ int controller_saveAsBinary(char* path , LinkedList* pArrayListEmployee)
  *
  */
 
-int controller_proximoID(LinkedList* pArrayListEmployee)
+int proximoID(LinkedList* pArrayListEmployee)
 {
     Employee* auxEmp;
 
     int aux;
     int id = 0;
-    int tam;
+    int tam= ll_len(pArrayListEmployee);
     int idAnt;
 
     if(pArrayListEmployee != NULL)
     {
-        tam = ll_len(pArrayListEmployee);
         if(tam > 0)
         {
             for(int i = 0; i<tam; i++)
