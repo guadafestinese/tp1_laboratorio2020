@@ -553,32 +553,39 @@ int proximoID(LinkedList* pArrayListEmployee)
                 return opcion;
 }
 
+/** \brief Busca el ultimo ID y lo incrementa al dar de alta un empleado
+ *
+ * \param LinkedList* pArrayListEmployee
+ * \param int* idParaUsar
+ * \return El ultimo id
+ *
+ */
 
 int buscarUltimoID(LinkedList* pArrayListEmployee,int* idParaUsar){
     Employee* emp;
 
     int id;
     int tam;
-    int error = 1; // retorna 1 si falla y 0 si salio todo bien
+    int error = 1;
     int idMasGrande;
     int flag = 0;
 
     if(pArrayListEmployee != NULL)
 	{
-        tam = ll_len(pArrayListEmployee);	// consigo el tamaño
+        tam = ll_len(pArrayListEmployee);
 
-        for(int i=0; i<tam; i++) // recorro la lista
+        for(int i=0; i<tam; i++)
 		{
-            emp = ll_get(pArrayListEmployee,i);	// copio datos del indice.
-            employee_getId(emp,&id);	// consigo los datos del empleado.
+            emp = ll_get(pArrayListEmployee,i);
+            employee_getId(emp,&id);
             if(flag==0 || id>idMasGrande){
-            	idMasGrande = id;	// copio la id si es mayor a la que ya tenia.
-            	flag=1;		//en la primer iteracion copio el primer id y cambio la bandera
+            	idMasGrande = id;
+            	flag=1;
             }
             error = 0;
         }
     }
-	idMasGrande++; // le sumo 1 al id mas grande
+	idMasGrande++;
     *idParaUsar = idMasGrande;
     return error;
 }
