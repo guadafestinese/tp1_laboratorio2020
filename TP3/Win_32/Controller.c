@@ -81,7 +81,7 @@ int controller_addEmployee(LinkedList* pArrayListEmployee)
     nuevoEmp = employee_new();
 
     int todoOk = 0;
-    int auxId;
+    int id;
     int auxHoras;
     int auxSueldo;
     char auxNombre[30];
@@ -93,7 +93,8 @@ int controller_addEmployee(LinkedList* pArrayListEmployee)
 
     if(pArrayListEmployee != NULL)
     {
-        auxId = proximoID(pArrayListEmployee);
+
+        buscarUltimoID(pArrayListEmployee, &id);
         printf("Ingrese nombre: ");
         fflush(stdin);
         gets(auxNombre);
@@ -135,7 +136,7 @@ int controller_addEmployee(LinkedList* pArrayListEmployee)
 
         if(nuevoEmp != NULL)
         {
-            employee_setId(nuevoEmp, auxId);
+            employee_setId(nuevoEmp, id);
             employee_setNombre(nuevoEmp, auxNombre);
             employee_setSueldo(nuevoEmp, auxSueldo);
             employee_setHorasTrabajadas(nuevoEmp, auxHoras);
@@ -550,4 +551,34 @@ int proximoID(LinkedList* pArrayListEmployee)
 
                 scanf("%d" , &opcion);
                 return opcion;
+}
+
+
+int buscarUltimoID(LinkedList* pArrayListEmployee,int* idParaUsar){
+    Employee* emp;
+
+    int id;
+    int tam;
+    int error = 1; // retorna 1 si falla y 0 si salio todo bien
+    int idMasGrande;
+    int flag = 0;
+
+    if(pArrayListEmployee != NULL)
+	{
+        tam = ll_len(pArrayListEmployee);	// consigo el tamaño
+
+        for(int i=0; i<tam; i++) // recorro la lista
+		{
+            emp = ll_get(pArrayListEmployee,i);	// copio datos del indice.
+            employee_getId(emp,&id);	// consigo los datos del empleado.
+            if(flag==0 || id>idMasGrande){
+            	idMasGrande = id;	// copio la id si es mayor a la que ya tenia.
+            	flag=1;		//en la primer iteracion copio el primer id y cambio la bandera
             }
+            error = 0;
+        }
+    }
+	idMasGrande++; // le sumo 1 al id mas grande
+    *idParaUsar = idMasGrande;
+    return error;
+}

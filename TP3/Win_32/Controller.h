@@ -8,5 +8,5 @@ int controller_sortEmployee(LinkedList* pArrayListEmployee);
 int controller_saveAsText(char* path , LinkedList* pArrayListEmployee);
 int controller_saveAsBinary(char* path , LinkedList* pArrayListEmployee);
 
-int proximoID(LinkedList* pArrayListEmployee);
 int menuModificar();
+int buscarUltimoID(LinkedList* pArrayListEmployee,int* idParaUsar);

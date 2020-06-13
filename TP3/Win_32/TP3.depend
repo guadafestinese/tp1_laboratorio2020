@@ -120,7 +120,7 @@
 	"Controller.h"
 	"Employee.h"
 
-1592086015 c:\users\usuario\desktop\programacion2020\tp1\tp 1\tp1_laboratorio2020\tp3\win_32\controller.h
+1592087280 c:\users\usuario\desktop\programacion2020\tp1\tp 1\tp1_laboratorio2020\tp3\win_32\controller.h
 
 1592062879 source:c:\users\usuario\desktop\programacion2020\tp1\tp 1\tp1_laboratorio2020\tp3\win_32\parser.c
 	<stdio.h>
@@ -137,7 +137,7 @@
 
 1592080184 c:\users\usuario\desktop\programacion2020\tp1\tp 1\tp1_laboratorio2020\tp3\win_32\utn.h
 
-1592086306 source:c:\users\usuario\desktop\programacion2020\tp1\tp 1\tp1_laboratorio2020\tp3\win_32\controller.c
+1592087795 source:c:\users\usuario\desktop\programacion2020\tp1\tp 1\tp1_laboratorio2020\tp3\win_32\controller.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
